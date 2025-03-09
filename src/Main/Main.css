@@ -1,0 +1,17 @@
+.Main{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    align-items: flex-end;
+    background: linear-gradient(164deg, rgba(39,138,218,1) 0%, rgba(148,200,242,1) 100%);
+}
+
+.Main__text{
+    font-size: 32px;
+    margin: 0;
+    align-self:baseline;
+}
+
+.Main__image{
+    aspect-ratio: 1;
+}
