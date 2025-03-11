@@ -1,6 +1,6 @@
 import "./Main.css";
 import { motion } from "framer-motion";
-import stockImage from '../assets/stockimage.jpg';
+import stockImage from '../../assets/stockimage.jpg';
 function Main() {
 
     return (

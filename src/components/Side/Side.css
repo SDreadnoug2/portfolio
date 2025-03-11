@@ -40,11 +40,7 @@
     line-height: 200%;
     font-size: 20px;
 }
-.Side__title, .Side__letter {
-    display: inline-block;
-    overflow: visible;
-    white-space: nowrap;
-}
+
 
 .Side__blocker{
     position: fixed;

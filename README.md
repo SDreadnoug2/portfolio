@@ -4,4 +4,4 @@ Things to do
 - Find a widget to put on the about section
 - Add a store / files section
 - Maybe think about making it so you can set a color
-- Redo the designs a little bit
+- Redo the designs a little bitgit a

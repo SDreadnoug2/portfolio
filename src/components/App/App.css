@@ -22,18 +22,18 @@
   grid-template-areas: 
     "side header header"
     "side main main"; 
+    
 }
 
 .Side{
   grid-area: side;
   background-color: rgba(39,138,218,1);
-  border-right: solid 1px white;
-  border-radius: 0 0 60px 60px;
+ /* border-right: solid 1px white;*/
+  /*border-radius: 0 0 60px 0;*/
 }
-
 .Header{
   background-color: rgba(39,138,218,1);
-  border-bottom: solid 1px white;
+ /* border-bottom: solid 1px white;*/
   grid-area: header;
   border-radius: 0 0 60px 0;
 }
@@ -41,5 +41,5 @@
 .Main{
   background-color: rgba(39,138,218,1);
   grid-area: main;
-  border-radius: 0 60px 0 60px;
+ /* border-radius: 0 60px 0 60px;*/
 }
