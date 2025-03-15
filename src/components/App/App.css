@@ -1,45 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@font-face {
+  font-family: 'btseps2';
+  src: url("../../assets/fonts/btseps2.woff2") format('woff2');
+}
+/*
 #root {
   margin: 0 auto;
   width: 100vw;
-  height: 100vh;
-  background-color: rgb(32, 32, 32);
-}
 
+}
 
 .App{
-  font-family: "Funnel Sans", sans-serif;  
+  height: 100vh;
+  font-family: "Geist", sans-serif;
   font-weight: 500;
   color: white;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(39,138,218,1) 0%, rgba(148,200,242,1) 100%);
+  background-repeat: no-repeat;
+}
+
+.App__header{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 26px 0 0 6px;
+  margin-bottom: 40px;
+}
+
+.App__logo{
+  display:flex;
+  
+}
+
+.star_s{
+  position: relative;
+  width: 52px;
+  top: 100px;
+  left: 20px;
+
+}
+
+.star_l{
+  position: relative;
+  width: 105px;
+  bottom: 20px;
+  right: 35px;
+}
+
+.App__top{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  transform: translateX(-30px);
+}
+
+.App__top_time{
+  font-size: 36px;
+  font-family: 'Bai Jamjuree';
+  font-weight: 200;
+  margin: 0 10px 0 0;
+  padding: 0;
+  transform: translateY(10px);
+}
+
+.App__top_border{
+  border-top: solid 1px white;
+  width: 100%;
+  transform: translateY(12px);
+}
+
+.triple{
+  height: 45px;
+  width: 44px;
+  transform: translateY(40px);
+  padding-right: 36px;
+}
+
+.App__body{
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  display: grid; 
-  grid-template-columns: 0.8fr 1.1fr 1.2fr; 
-  grid-template-rows: 200px 1.5fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "side header header"
-    "side main main"; 
-    
+}
+*/
+
+#root {
+  margin: 0 auto;
+  width: 100vw;
+
 }
 
-.Side{
-  grid-area: side;
-  background-color: rgba(39,138,218,1);
- /* border-right: solid 1px white;*/
-  /*border-radius: 0 0 60px 0;*/
-}
-.Header{
-  background-color: rgba(39,138,218,1);
- /* border-bottom: solid 1px white;*/
-  grid-area: header;
-  border-radius: 0 0 60px 0;
+.App{
+  height: 100vh;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(180deg, rgba(39,138,218,1) 0%, rgba(148,200,242,1) 100%);
+  background-repeat: no-repeat;
 }
 
-.Main{
-  background-color: rgba(39,138,218,1);
-  grid-area: main;
- /* border-radius: 0 60px 0 60px;*/
+.App__left{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 26px 0 0 0px;
+  margin-bottom: 40px;
+  width: 550px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.App__logo{
+  display:flex;
+  
+}
+
+
+.star_s{
+  position: relative;
+  width: 52px;
+  top: 100px;
+  left: 20px;
+
+}
+
+.star_l{
+  position: relative;
+  width: 105px;
+  bottom: 20px;
+  right: 35px;
+}
+
+.App__body{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 90%;
+  width: 100%;
+  margin-top: 30px;
+  box-sizing: border-box;
+  margin-right: 15px;
+}
+
+.App__top_time{
+  font-size: 36px;
+  font-family: 'Bai Jamjuree';
+  font-weight: 200;
+  margin: 0 10px 10px 0;
+  transform: translateY(10px);
+  align-self: flex-end;
+}
+
+.App__top_border{
+  border-top: solid 1px white;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.triple{
+  height: 45px;
+  width: 44px;
+  transform: translateY(70px);
+  padding-right: 16px;
 }
