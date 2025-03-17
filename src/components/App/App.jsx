@@ -10,53 +10,34 @@ import ActivePanelContext from '../../contexts/ActivePanelContext'
 import { motion, AnimatePresence, scroll, spring } from 'framer-motion'
 function App() {
 
-  const [activePanel, setActivePanel] = useState(null);
+  const [activePanel, setActivePanel] = useState("");
   useEffect(() => {
     console.log(activePanel);
   }, [activePanel])
 
 
   return (
-      <motion.div className='App'>
-        <div className='App__left'>
-            <div className="App__logo">
-              <img className='star_s' src={starS}></img>
-              <img className='logo' src={nanosGarageImg}></img>
-              <img className='star_l' src={starL}></img>
-            </div>
-            <Menu/>
-        </div>
-        <div className="App__body">
-          <p className='App__top_time'>3:42PM</p>
-          <div className="App__top_border"></div>
-          <Content/>
-        </div>
-        <img className='triple' src={tripleStack}></img>
-      </motion.div>
-
-  )
-/*
-  return (
-    <motion.div className="App">
-        <div className="App__header">
-          <div className="App__logo">
-            <img className='star_s' src={starS}></img>
-            <img className='logo' src={nanosGarageImg}></img>
-            <img className='star_l' src={starL}></img>
+    <ActivePanelContext.Provider value={{setActivePanel, activePanel}}>
+        <motion.div className='App'>
+          <div className='App__left'>
+              <div className="App__logo">
+                <img className='star_s' src={starS}></img>
+                <img className='logo' src={nanosGarageImg}></img>
+                <img className='star_l' src={starL}></img>
+              </div>
+              <Menu/>
           </div>
-          <div className="App__top">
+          <div className="App__body">
             <p className='App__top_time'>3:42PM</p>
             <div className="App__top_border"></div>
+            <Content/>
           </div>
           <img className='triple' src={tripleStack}></img>
-        </div>
-        <div className="App__body">
-          <Menu/>
-          <Content/>
-        </div>
+        </motion.div>
+      </ActivePanelContext.Provider>
 
-    </motion.div>
-  )*/
+  )
+
 }
 
 export default App
