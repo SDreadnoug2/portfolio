@@ -10,25 +10,50 @@ import ActivePanelContext from '../../contexts/ActivePanelContext'
 import { motion, AnimatePresence, scroll, spring } from 'framer-motion'
 function App() {
 
-  const [activePanel, setActivePanel] = useState("");
-  useEffect(() => {
-    console.log(activePanel);
-  }, [activePanel])
 
+  const [activePanel, setActivePanel] = useState("");
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    //Set time on page load.
+    var date = new Date();
+    setTime(`${date.getHours()}:${date.getMinutes()}`)
+    //Refresh/update time.
+    const interval = setInterval(() => {
+      var date = new Date();
+      setTime(`${date.getHours()}:${date.getMinutes()}`)
+    }, 1000);
+
+    return () => clearInterval(interval);
+
+  }, []);
 
   return (
     <ActivePanelContext.Provider value={{setActivePanel, activePanel}}>
+
         <motion.div className='App'>
           <div className='App__left'>
               <div className="App__logo">
-                <img className='star_s' src={starS}></img>
+                <motion.img 
+                className='star_s' 
+                src={starS}
+                initial={{scale: 1.2}}
+                animate={{scale: 1}}
+                transition={{type: "spring", stiffness: 600, damping: 10}}
+                ></motion.img>
                 <img className='logo' src={nanosGarageImg}></img>
-                <img className='star_l' src={starL}></img>
+                <motion.img 
+                className='star_l' 
+                src={starL}
+                initial={{scale: 1.2}}
+                animate={{scale: 1}}
+                transition={{type: "spring", stiffness: 600, damping: 10}}
+                ></motion.img>
               </div>
               <Menu/>
           </div>
           <div className="App__body">
-            <p className='App__top_time'>3:42PM</p>
+            <p className='App__top_time'>{time}</p>
             <div className="App__top_border"></div>
             <Content/>
           </div>

@@ -2,12 +2,11 @@
   line-height: 1.5;
   font-weight: 400;
   color: rgb(20, 20, 20);
-  background: rgb(39,138,218);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  background-color: (180deg, rgba(39,138,218,1) 0%, rgba(148,200,242,1) 100%);
 }
 
 body {

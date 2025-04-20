@@ -1,7 +1,8 @@
 import './Menu.css';
-import { motion } from 'framer-motion';
+import { motion} from 'framer-motion';
 import { useContext } from 'react';
 import ActivePanelContext from '../../contexts/ActivePanelContext';
+
 function Menu() {
 
     const buttons = ["editing", "software", "contact", "about"];
@@ -12,10 +13,10 @@ function Menu() {
             {buttons.map((button) => (
             <motion.button
                 key={button}
-                initial={{ boxShadow: "7px 8px 0px rgba(0,0,0,1)" }} 
-                whileHover={{ boxShadow: "7px 15px 0px rgba(0,0,0,1)", y: -10 }} 
-                whileTap={{scale: 0.9, backgroundColor: '#000000', duration: 0}}
-                animate={{backgroundColor: activePanel === button ? "#94C8F2" : "white", color: activePanel === button ? "white" : "black"}}
+                initial={{ boxShadow: "0px 15px 0px rgba(0,0,0,1)" }} 
+                whileHover={{ boxShadow: "0px 12px 0px rgba(0,0,0,1)", y: 5 }} 
+                whileTap={{ y: 8, boxShadow: "0px 10px 0px, rgb(0,0,0,1)" ,backgroundColor: '#002bff', color: "#ffffff"}}
+                animate={{y: activePanel === button ? 6 : 0, backgroundColor: activePanel === button ? "#94C8F2" : "#ffffff", color: activePanel === button ? "#ffffff" : "#000000", boxShadow: activePanel === button ? "0px 8px 0px rgba(0,0,0,1)" : "0px 15px 0px rgba(0,0,0,1)" }}
                 transition={{ duration: 0.1 }} 
                 onClick={() => setActivePanel(button)}
                 className={'Menu__button'}>
