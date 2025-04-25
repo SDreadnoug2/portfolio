@@ -8,7 +8,7 @@
 #root {
   margin: 0 auto;
   width: 100vw;
-  background: linear-gradient(180deg, rgba(39,138,218,1) 0%, rgba(148,200,242,1) 100%);
+  background: black;
 }
 
 .App{
@@ -18,7 +18,7 @@
   color: white;
   display: flex;
   flex-direction: row;
-  background-image: url(../../assets/background.svg);
+
   background-size: 150%;
   background-position: 0%;
   background-repeat: no-repeat;

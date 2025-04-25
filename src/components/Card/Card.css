@@ -1,0 +1,23 @@
+.Card{
+    background-color: white;
+    border: 0px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.Card__image{
+    object-fit: contain;
+    width: 80%;
+}
+
+.Card__title{
+    color: white;
+    cursor:pointer;
+}
+
+.Card__subtitle{
+
+}

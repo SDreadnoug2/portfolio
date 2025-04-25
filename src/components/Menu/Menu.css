@@ -11,6 +11,7 @@
 .Menu__button{
     display: flex;
     justify-content: flex-end;
+    color: white;
     align-items: flex-end;
     padding: 20px;
     width: 330px;
@@ -18,8 +19,16 @@
     font-family: 'Geist';
     font-weight: 600;
     font-size: 36px;
-    border-radius: 45px;
-    border: solid 1px black;
-    background-color: white;
     cursor: pointer;
+    background-color: rgba(0, 129, 255, 0.12);
+    border-color: white;
+    border-style: solid;
+    border-radius: 16px;
+
+}
+
+.selected {
+    background-color: white;
+    color: rgb(109, 109, 109);
+    border-radius: 16px;
 }
