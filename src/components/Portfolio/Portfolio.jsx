@@ -1,38 +1,34 @@
 
 import './Portfolio.css';
 import { projects} from "../../utils/videoProjects.js";
-import { useEffect, useRef, useState } from 'react';
-import Card from "../Card/Card.jsx";
-import { AnimatePresence, motion, usePresenceData, wrap, useAnimation} from 'framer-motion';
-import bg from "../../assets/Y2KShape49.svg";
+import {useEffect, useState } from 'react';
+import { AnimatePresence, motion} from 'framer-motion';
+import BallScene from '../threeScene/threeScene.jsx';
+import ProjectContent from '../ProjectContent/ProjectContent.jsx';
+import { append } from 'three/tsl';
+
 function Portfolio () {
-
-
-    const heightRef = useRef(null);
     const [project, setProject] = useState({});
     const [selectedIndex, setSelectedIndex] = useState(null);
     const total = projects.length;
     const height = 400;
-
-    console.log(height);
-    const clicked = {color: "black"};
-
-    const controls = useAnimation();
+    const history = [];
+    const forwardHistory = [];
     function handleClick(index, project) {
         setSelectedIndex(index);
         setProject(project);   
 };    
-    
+
+
     return(
-        <AnimatePresence>
             <motion.div className='Portfolio'>
                 <motion.div
-                className='Portfolio__items'>
+                className='Portfolio__projects'>
                     {projects.map((project, index) => {
                         const isActive = selectedIndex === index;
                         return (
                             <motion.div 
-                              className='Portfolio__box'
+                              className='Portfolio__nav'
                               key={index}
                               onClick={() => handleClick(index, {...project})}
                               animate={isActive ? "clicked" : "rest"}
@@ -52,7 +48,6 @@ function Portfolio () {
                               style={{overflow: 'hidden', transformOrigin: 'top' }}
                             >
                               <motion.h2
-                              className='Portfolio__text'
                                 variants={{
                                   rest: { y: -20, color: "white" },
                                   clicked: { y: -25, color: "black" }
@@ -67,15 +62,13 @@ function Portfolio () {
                     })}
                 </motion.div>
                 <motion.div className='Portfolio__content'>
-                    <img className="Portfolio__image" src={project.src}></img>
-                    <img className='Portfolio__back' src={bg}></img>
-                    <div className="Portfolio__text-wrapper">
-                        <a className="Portfolio__link"href={project.link} target='blank'>{project.title}</a>
-                    </div>                  
-
+                    <motion.div className="Portfolio__header">
+                        <motion.h1 className='Portfolio__subtitle'>portfolio</motion.h1>
+                        <BallScene/>
+                    </motion.div>
+                    <ProjectContent className="Portfolio__main" project={project}/>
                 </motion.div>
             </motion.div>
-        </AnimatePresence>
     )
 
 }

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+.PortfolioContent__Webbar{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    margin-top: 1px;
+}
+
+.PortfolioContent__input{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: "Zen Dots", sans-serif ;
+    border: 1px white solid;
+    border-radius: 0px;
+    font-size: 12px;
+}
+
+.PortfolioContent__input:focus{
+    outline:none;
+    background-color: white;
+    color: black;
+    border-radius: 0%;
+
+}
+
+.PortfolioContent__button{
+    font-family: "Zen Dots", sans-serif;
+    border-right: solid 1px black;
+
+}
+
+.PortfolioContent {  
+    display: grid;
+    grid-template-columns: 1.1fr;
+    grid-template-rows: 1.4fr 0.6fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "media"
+      "info";
+  }
+  
+  
+.ProjectContent__info{
+    grid-area:"info"
+}
+
+.ProjectContent__button{
+}
+
+
+.ProjectContent__media{
+    display: flex;
+    grid-area: "media";
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+.ProjectContent__image{
+    width: 40%;
+
+}

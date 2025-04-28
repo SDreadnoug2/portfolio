@@ -17,6 +17,7 @@ function App() {
   useEffect(() => {
     //Set time on page load.
     var date = new Date();
+    setActivePanel("welcome");
     setTime(`${date.getHours()}:${date.getMinutes()}`)
     //Refresh/update time.
     const interval = setInterval(() => {
@@ -30,7 +31,6 @@ function App() {
 
   return (
     <ActivePanelContext.Provider value={{setActivePanel, activePanel}}>
-
         <motion.div className='App'>
           <div className='App__left'>
               <div className="App__logo">

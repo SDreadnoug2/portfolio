@@ -5,21 +5,22 @@ import { AnimatePresence } from 'framer-motion';
 import { motion, useSpring } from 'framer-motion';
 import Portfolio from '../Portfolio/Portfolio';
 
-
 function Content() {
     const portfolioRef = useRef(null);
     const downloadsRef = useRef(null);
     const storeRef = useRef(null);
     const aboutRef = useRef(null);
+    const welcomeRef = useRef(null);
 
     const sectionRefs = {
     portfolio: portfolioRef,
     downloads: downloadsRef,
     store: storeRef,
     about: aboutRef,
+    welcome: welcomeRef,
     };
 
-    const {activePanel} = useContext(ActivePanelContext);
+    const {activePanel, setActivePanel} = useContext(ActivePanelContext);
 
     useEffect(() => {
         const section = sectionRefs[activePanel.toLowerCase()];
@@ -57,13 +58,13 @@ function Content() {
 
     return (
         <div className="Content">
-        <div className="Content__welcome">
+        <div className="Content__welcome" onMouseEnter={() => setActivePanel("welcome")} ref={welcomeRef}>
             <p> Welcome to nanos garage</p>
         </div>
-        <div className='Content__page' ref={portfolioRef}><Portfolio /></div>
-        <div className='Content__page' ref={downloadsRef}><Downloads /></div>
-        <div className='Content__page' ref={storeRef}><Store /></div>
-        <div className='Content__page' ref={aboutRef}><About /></div>
+        <div className='Content__page' ref={portfolioRef} onMouseEnter={()=> setActivePanel("portfolio")} ><Portfolio /></div>
+        <div className='Content__page' ref={downloadsRef} onMouseEnter={()=> setActivePanel("downloads")}><Downloads /></div>
+        <div className='Content__page' ref={storeRef} onMouseEnter={()=> setActivePanel("store")}><Store /></div>
+        <div className='Content__page' ref={aboutRef} onMouseEnter={()=> setActivePanel("about")}><About /></div>
       </div>
     );
 }
