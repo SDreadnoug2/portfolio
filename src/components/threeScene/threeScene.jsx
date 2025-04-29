@@ -13,7 +13,7 @@ function SpinningBall() {
   return (
     <mesh ref={meshRef}>
       <sphereGeometry args={[0.5, 12, 6]} />
-      <meshStandardMaterial color="black" wireframe={true}/>
+      <meshStandardMaterial color="white" wireframe={true}/>
     </mesh>
   )
 }

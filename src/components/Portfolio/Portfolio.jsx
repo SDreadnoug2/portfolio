@@ -66,7 +66,7 @@ function Portfolio () {
                         <motion.h1 className='Portfolio__subtitle'>portfolio</motion.h1>
                         <BallScene/>
                     </motion.div>
-                    <ProjectContent className="Portfolio__main" project={project}/>
+                    <ProjectContent project={project}/>
                 </motion.div>
             </motion.div>
     )

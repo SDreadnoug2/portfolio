@@ -1,38 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
-
-.PortfolioContent__Webbar{
-    width: 100%;
-    display:flex;
-    flex-direction: row;
-    margin-top: 1px;
-}
-
-.PortfolioContent__input{
-    width: 100%;
-    background-color: black;
-    color: white;
-    font-family: "Zen Dots", sans-serif ;
-    border: 1px white solid;
-    border-radius: 0px;
-    font-size: 12px;
-}
-
-.PortfolioContent__input:focus{
-    outline:none;
-    background-color: white;
-    color: black;
-    border-radius: 0%;
-
-}
-
-.PortfolioContent__button{
-    font-family: "Zen Dots", sans-serif;
-    border-right: solid 1px black;
-
-}
 
 .PortfolioContent {  
     display: grid;
+    font-family: "Windows Regular";
     grid-template-columns: 1.1fr;
     grid-template-rows: 1.4fr 0.6fr;
     grid-auto-columns: 1fr;
@@ -43,26 +12,63 @@
       "info";
   }
   
-  
 .ProjectContent__info{
-    grid-area:"info"
+    border-top: solid 1px white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ProjectContent__info_side{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.ProjectContent__media {
+    grid-area: media;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.ProjectContent__image{
+    width: 80%;
 }
 
 .ProjectContent__button{
-}
-
-
-.ProjectContent__media{
     display: flex;
-    grid-area: "media";
-    overflow: hidden;
-    width: 100%;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-
-}
-.ProjectContent__image{
+    flex-direction: column;
+    font-family: "Windows Regular";
+    font-size: clamp(1rem, 2vw, 3rem);
     width: 40%;
+    border: none;
+    background-color: blue;
+    border-left: solid white 1px;
+    color: white;
+    text-align: end;
+}
 
+.ProjectContent__button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.ProjectContent__subtext{
+    background-color: white;
+    font-size: clamp(1rem, 2vw, 3rem);
+    color: black;
+    margin: 0 0 1px 0;
+    height: 50%;
+}
+
+.ProjectContent__arrow{
+    width: 64px;
+    align-self: flex-end;
+    transform: rotate(90deg);
 }
